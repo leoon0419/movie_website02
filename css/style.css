@@ -1,0 +1,648 @@
+@charset "utf-8";
+@import url(normalize.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "游ゴシック体",YuGothic,"游ゴシック","Yu Gothic",sans-serif;
+    background-image: url(../images/chihiro011.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #171a0f;
+}
+
+
+img {
+    vertical-align: top;
+}
+/*メインページヘッダー*/
+
+.header {
+    width: 100%;
+    display: flex;
+    background-color: #000;
+}
+
+.header_logo1 {
+    width:auto;
+   margin: auto 0 auto auto;
+}
+.header_logo1 img {
+    width: 160px;
+   
+}
+.header_logo2 {
+    width: 400px;
+    margin:auto auto auto 10px;  
+}
+.header_logo2 h1 {
+    margin: 0;
+}   
+.header_logo2 img {
+    width: 100%;
+}
+
+
+/*ハンバーガーメニュー詳細*/
+
+.navbar {
+    position: relative; /* 親要素の位置を基準に子要素の位置を相対的に配置す */
+    margin-left: 20px;  
+    margin-top: 15px;   
+}
+
+#menu-toggle {
+    display: none; /* チェックボックスを非表示に */
+}
+
+.menu-icon {
+    display: block; 
+    cursor: pointer; /* マウスカーソルをポインターに変更（クリック可能に見せる） */
+    font-size: 54px; /* フォントサイズ設定 */
+    color: white; /* 文字色を白 */
+    position: absolute; /* 親要素に対して絶対位置に配置する */
+    left: 20px; 
+    top: 20px; 
+}
+
+.menu {
+    display: none; /* 初期状態では非表示 */
+    flex-direction: column; /* 縦方向に並べる */
+    background-color: rgba(0, 0, 0, 0.8); 
+    position: absolute; /* 親要素に対して絶対位置に配置 */
+    top: 60px; 
+    left: 0; 
+    width: 200px; 
+    padding: 10px 0;
+    border-radius: 10px; 
+}
+
+.menu li {
+    list-style: none; /* リストのマーカー削除 */
+    text-align: center; /* テキストを中央へ */
+}
+
+.menu li a {
+    color: white; /* リンクの文字色設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+    padding: 10px 0;
+    display: block; /* ブロック要素として表示する */
+    transition: background-color 0.3s; /* トランジションを設定 */
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+    display: flex; /* チェックされた状態でメニューをフレックスコンテナとして表示 */
+}
+
+
+
+
+/* フッター設定 */
+.footer {
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0,0,0);
+    text-align: center;
+    padding: 0px;
+    
+}
+.footer_Produce {
+    color: azure;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    flex-direction: column;
+}
+.footer_Produce h2 {
+    justify-content: center;
+    text-decoration:underline;
+    padding: 50px;
+}
+
+.footer_copyright {
+    color: #fc001d;
+    padding: 50px;
+}
+
+/*HOME設定*/
+.mainvisual {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center
+    
+}
+.mainvisual img {
+    width: 60%;
+    opacity: 0.9;
+}
+/* メインエリア */
+.main_contents {
+    width: 960px;
+    margin: 80px auto 80px;
+}
+
+/* イントロテキスト */
+.intro_text {
+    margin-top: 0;
+    padding: 40px;
+}
+.intro_main {
+    color:white;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+.intro_catch {
+    font-size: 36px;
+    color:#ffffe0;
+    margin: 70px 0 120px;
+    text-align: center;
+}
+.intro_sub {
+    font-family: serif;
+}
+.intro_text p {
+    color:white;
+    font-size: 18px;
+    margin: 40px 0;
+}
+.intro_daizi {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fffacd;
+    font-size: 43px;
+    margin: 150px 0 50px;
+    text-align: center;
+}
+
+.main_2 {
+    background-color: rgba(255,255,255,0.8);
+    height: 1400px;
+    margin-top: 300px;
+    margin-bottom: 200px;
+    text-align: center;
+    border-radius: 15px;
+}
+.main_2_title {
+    color: #dc143c;
+    font-family: serif;
+    font-size: 30px;
+    margin: 200px 0 30px;
+    padding: 50px;
+    text-decoration: underline;
+
+}
+.main_2_movie {
+    color: black;
+}
+.movie1 {
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.movie2 {
+    border-radius: 15px;
+}
+.main_2_movie2 {
+    margin-top: 150px;
+    color: black;
+}
+
+
+
+
+
+/* バナーエリア */
+
+.explanation {
+    padding-bottom: 50px;
+    font-size: 16px;
+    color: #fffacd;
+    text-align: center;
+    border-bottom: 1px solid #fffacd ;
+}
+
+.banner_area {
+    width: 100%;
+    padding: 40px 80px;
+    flex-direction: column;
+}
+.banner_section {
+    width: 40%;
+    margin: 30px;
+    padding: 30px;
+    background-color: rgba(236,255,252,0.5);
+}
+.banner_section h2 {
+    color: aliceblue;
+    font-family: fantasy;
+    margin: 20px auto 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.banner_section img {
+    width: 100%;
+}
+
+.banner_section a {
+    text-decoration: none;
+    transition: 0.7s;
+}
+.banner_section a:hover {
+    color:#171a0f;
+}
+.banner_section a img {
+    transition:opacity 0.7s;
+}
+.banner_section a:hover img {
+    opacity: 0.75;
+}
+.banner_section:nth-child(odd) {
+    align-self: flex-start;
+    margin-right: auto;
+}
+.banner_section:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======================*/
+/*-----STORYページ設定-----*/
+/*=======================*/
+
+.body_2 {
+    font-family: "游ゴシック体",YuGothic,"游ゴシック","Yu Gothic",sans-serif;
+    background-image: url(../images/storyback.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*storyメインエリア*/
+
+.main_contents_second {
+    width: 1080px;
+    margin: 80px auto 80px;
+}
+.main_contents_second h2 {
+    margin: 0;
+    font-size: 58px;
+    color:black;
+}
+
+.content_text,.content_img {
+    width: 48%;
+}
+.content_img img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/*story起承転結説明エリア*/
+
+.intro_text_2 {
+    margin-bottom: 200px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.2);
+   
+}
+.story_zone {
+    display: flex;
+    align-items: flex-start; /* テキストを上揃えにする */
+    justify-content: center; /* 横方向で中央に揃える */
+    margin: 100px auto;
+    border-bottom: 2px solid rgb(206, 196, 196);/*セクションを視覚しやすいように区切りの線を配置*/
+    width: 80%;
+}
+
+.text_section {
+    width: 60%; /* 必要に応じて調整 */
+    margin-bottom: 30px;
+    text-align: left; /* テキストを左揃えにする */
+    margin-right: 10px; /* テキストと画像の間に最小限のスペースを追加 */
+}
+.text_section p {
+    width: 60%; /* テキストの幅設定 */
+    font-family: YuMincho;
+    text-shadow: 0 0 10px #ffe3e3;
+}
+
+
+.story_zone img {
+    width: 25%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-left: 0; /* 画像の左のマージンを削除 */
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.text_section h2 {
+    color: 	firebrick;
+    width: 17%;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    border-radius: 40px;
+    background-color:rgba(244, 235, 235, 0.7);
+}
+
+
+
+
+/*storyバナーエリア*/
+.banner_area_2 {
+    width: 100%;
+    margin-top: 150px;
+    padding: 40px 80px 80px 80px;
+    flex-direction: column;
+}
+.banner_section_2 {
+    width: 35%;
+    margin: 30px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.banner_section_2 h2 {
+    color: aliceblue;
+    font-family: fantasy;
+    margin: 20px auto 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.banner_section_2 img {
+    width: 100%;
+}
+
+.banner_section_2 a {
+    text-decoration: none;
+    transition: 0.7s;
+}
+.banner_section_2 a:hover {
+    color:#171a0f;
+}
+.banner_section_2 a img {
+    transition:opacity 0.7s;
+}
+.banner_section_2 a:hover img {
+    opacity: 0.75;
+}
+.banner_section_2:nth-child(odd) {
+    align-self: flex-start;
+    margin-right: auto;
+}
+.banner_section_2:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+
+
+
+
+/*=======================*/
+/*--charactersページ設定--*/
+/*=======================*/
+
+
+.body_3 {
+    font-family: "游ゴシック体",YuGothic,"游ゴシック","Yu Gothic",sans-serif;
+    background-image: url(../images/キャラクターページ背景.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*メインエリア*/
+
+.main_contents_third {
+    width: 960px;
+    margin: 10px auto 20px auto;
+    padding-top: 20px;
+    background-color: rgba(91, 91, 91, 0.6);
+}
+
+#induction {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.569);
+    margin-top: 150px;
+    margin-left: 150px;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    border: 2px double black;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+
+.contents_characters {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.contents_characters .box {
+    width: 200px; /* ボックスの幅を統一 */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contents_characters img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.contents_characters .name {
+    margin-top: 10px;
+    font-size: 16px;
+    border: 3px double #000;
+    background-color: aliceblue;
+}
+
+/*説明文出力箇所設定*/
+#description-container {
+    padding-top: 50px;
+    display: none; /* 最初は非表示 */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透明に */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+#description {
+    white-space: pre-line; /* 改行を反映させる */
+    word-wrap: break-word; /* 単語の途中で改行 */
+    max-width: 100%; /* コンテナの幅に合わせる */
+    margin: 0 auto; /* コンテナ内で中央揃え */
+}
+
+
+/*=======================*/
+/*--otherページ設定--*/
+/*=======================*/
+
+.body_4 {
+    font-family: "游ゴシック体",YuGothic,"游ゴシック","Yu Gothic",sans-serif;
+    background-image: none;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*otherページ用ロゴ設定*/
+.header_other {
+    width: 100%;
+    display: flex;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header_logo_ziburi {
+    justify-content: center;
+    padding-left: 450px;
+    text-align: center;
+}
+.header_logo_ziburi img {
+    width: 45%;
+}
+
+
+.main_contents_fourth {
+    width: 960px;
+    margin: 40px auto 20px auto;
+    padding-top: 20px;
+}
+
+#induction_other {
+    margin: 50px 300px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px double black ;
+}
+.other_main {
+    margin-bottom: 150px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: rgba(255,255,255);
+}
+.one_content {
+    margin: 20px 20px 100px 20px;
+    border: 1px solid gray;
+}
+.title {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 350px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 2px double #828282;
+}
+
+.title a {
+    text-decoration: none;
+    color: #000;
+}
+.contents_detail {
+    padding: 50px;
+}
+
+.yokonarabe {
+    display: flex;
+    margin-top: 50px;
+    padding-left: 20px;
+}
+.sakuhinsyousai {
+    width: 65%;
+    margin-left: 80px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(117, 118, 118, 0.5);
+}
+
+.sakuhinsyousai {
+    line-height: 30px;
+}
+
+
+.contents_detail img {
+    width: 120%;
+}
+.Detailed_explanation {
+    width: 50%;
+    margin-top: 7ch;
+    padding-right: 60px ;
+}
+
+.line_1 {
+    display: flex;
+    margin-top: 10px ;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+.line_2 {
+    display: flex;
+    margin-top: 10px ;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+.line_3 {
+    display: flex;
+    margin-top: 10px ;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+.line_4 {
+    display: flex;
+    margin-top: 10px ;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.question {
+    margin-right: 20px;
+    color: gray;
+}
+.answer {
+    margin-left: 20px;
+    font-weight: bold;
+}
